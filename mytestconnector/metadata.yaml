@@ -1,4 +1,4 @@
-type: mytestconnector
+type: mytest
 
 status:
   class: connector

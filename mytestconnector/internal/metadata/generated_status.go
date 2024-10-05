@@ -9,7 +9,7 @@ import (
 )
 
 var (
-	Type = component.MustNewType("mytestconnector")
+	Type = component.MustNewType("mytest")
 )
 
 const (
