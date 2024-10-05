@@ -1,0 +1,14 @@
+{
+    "name": "Go",
+    "image": "mcr.microsoft.com/devcontainers/go:1-1.22-bullseye",
+    "forwardPorts": [4317,4318],
+    "postCreateCommand": "bash .devcontainer/init.sh",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.makefile-tools",
+                "golang.go"
+            ]
+        }
+    }
+  }

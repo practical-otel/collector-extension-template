@@ -1,0 +1,30 @@
+receivers:
+  otlp:
+    protocols:
+      http:
+      grpc:
+
+exporters:
+  debug:
+    verbosity: detailed
+
+connectors:
+  mytest:
+
+service:
+  pipelines:
+    traces/ingest:
+      receivers: [otlp]
+      exporters: [mytest]
+
+    traces/routed:
+      receivers: [mytest]
+      exporters: [debug]
+
+    logs/ingest:
+      receivers: [otlp]
+      exporters: [mytest]
+
+    logs/routed:
+      receivers: [mytest]
+      exporters: [debug]
